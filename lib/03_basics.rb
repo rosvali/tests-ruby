@@ -6,13 +6,13 @@ def who_is_bigger(a, b, c)
 end
 
 def reverse_upcase_noLTA(string)
-	return string.reverse.upcase.delete "LTA"
+	string.reverse.upcase.delete "LTA"
 end
 
 def array_42(array)
-	return false if array.index(42) == nil
-	return true
+	!array.index(42).nil?
 end
 
-def magic_array(array)
+def magic_array(a)
+	a.flatten.sort.map{|x| x * 2 unless x % 3 == 0}.uniq.compact
 end
